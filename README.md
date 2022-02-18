@@ -10,16 +10,16 @@ How to use this repo:
 
 2. Create a new file in the project directory ".env"
 
-3. Copy the following configuration variables names below and add our own data
-  ARCGIS_ONLINE_USERNAME = 
-  ARCGIS_ONLINE_PASSWORD = 
-  FEATURE_ID = 
+3. Copy the following configuration variables names below and add our own data/n
+  ARCGIS_ONLINE_USERNAME = /n
+  ARCGIS_ONLINE_PASSWORD = /n
+  FEATURE_ID = /n
 
-  HOST = 
-  PORT =
+  HOST = /n
+  PORT = /n
 
-  EMAIL = 
-  PASSWORD = 
+  EMAIL = /n 
+  PASSWORD = /n 
   
  4. Use the requirements.txt to create a virtual environment 
  
