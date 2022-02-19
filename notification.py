@@ -71,7 +71,7 @@ if os.path.exists(current_data):
     
     if compare_df == True:
         print("data is the same, no need to email or update current data")
-        clear_new_data(folder_path)
+        # clear_new_data(folder_path)
     else:
         new_records = new_df.loc[~new_df['ObjectID'].isin(current_df['ObjectID'])].copy()
         output_path = os.path.join(folder_path, "new_records.csv")
