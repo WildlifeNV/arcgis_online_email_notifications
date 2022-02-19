@@ -65,11 +65,11 @@ def send_email(path):
     server.starttls()
     server.login(config("EMAIL"), config("PASSWORD"))
     server.sendmail(msg["From"], email_list, msg.as_string())
-    print("email successfully sent")
 
 # set the new and current data csvs
 current_data = os.path.join(folder_path, "current_data.csv")
-new_data = os.path.join(folder_path, "Mortality_Reporting_Form_0.csv")
+feature = "{}_{}.csv".format(config("FEATURE_NAME"), config("FEATURE_NUMBER")).replace(" ", "_")
+new_data = os.path.join(folder_path, feature)
 
 # if current data is not avaliable, create current data and remove files 
 if os.path.exists(current_data):
@@ -79,17 +79,17 @@ if os.path.exists(current_data):
     
     # if true remove files, else create csv, send email, update current data and remove files
     if compare_df == True:
-        print("data is the same, no need to email or update current data")
         clear_new_data(folder_path)
+        print("Data is the same, no need to update, and remove the new files")
     else:
         new_records = new_df.loc[~new_df["ObjectID"].isin(current_df["ObjectID"])].copy()
         output_path = os.path.join(folder_path, "new_records.csv")
         new_records.to_csv(output_path)
         send_email(output_path)
         os.rename(new_data, current_data)
-        clear_new_data(folder_path)   
-        print("complete")
+        clear_new_data(folder_path)
+        print("Email sent successfully and current data updated")   
 else:
     os.rename(new_data, current_data)
     clear_new_data(folder_path)
-    print("this is a new data set, set the new data to the current")
+    print("New dataset, creating current data for future comparisons")
