@@ -23,6 +23,7 @@ This repo holds the script to pull data from an arcgis online account, compare t
   PORT =  
   EMAIL =  
   PASSWORD = 
+  EMAIL_RECIPIENTS =  
   
  4. Use the requirements.txt to create a virtual environment and activate it:  
      conda env create -n notifications_env -f requirements.yml && conda activate notifications_env
