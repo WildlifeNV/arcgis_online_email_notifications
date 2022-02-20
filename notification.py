@@ -37,9 +37,8 @@ def clear_new_data(path):
 
 # create an email, add the new records dataframe to the body of the email and send email
 def send_email(path):
-    df = pd.read_csv(path, index_col=0)
-    df_attachment = df[["ObjectID", "First Name:", "Last Name:", "Email:", "Date:", "Location Specifics:", "Location Description:", "x", "y"]]
-    recipients = ["ian.holl@ndow.org"]
+    df_attachment = pd.read_csv(path, index_col=0)
+    recipients = [config("EMAIL_RECIPIENTS")]
     email_list = [elem.strip().split(",") for elem in recipients]
     
     msg = MIMEMultipart()
@@ -54,6 +53,8 @@ def send_email(path):
         If you wish to unsubcribe from this list please notify the Nevada Department of Wildlife GIS staff.</p>
         <p>Here is a list of new records that have been added in the past 24 hours:</p>
         {0}
+        <p>To edit the data online through the Survey123 interface: <a>link</a>"
+        <p>View a dashboard of the data on Arcgis Online: <a>link</a>"
       </body>
     </html>
     """.format(df_attachment.to_html())
