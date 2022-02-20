@@ -18,7 +18,7 @@ This repo holds the script to pull data from an arcgis online account, compare t
   ARCGIS_ONLINE_PASSWORD =  
   FEATURE_ID =  
   LAYER_NAME =  
-  LAYER_ID =. 
+  LAYER_ID =  
   HOST =  
   PORT =  
   EMAIL =  
