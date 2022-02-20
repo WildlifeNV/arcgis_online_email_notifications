@@ -7,10 +7,10 @@ This repo holds the script to pull data from an arcgis online account, compare t
   Email account  
 
 ### How to use this repo:  
-1. Clone the repo to our local machine  
+1. Clone the repo to our local machine:    
   git clone https://github.com/WildlifeNV/arcgis_online_email_notifications.git  
 
-2. Create a new file in the project directory called ".env"  
+2. Create a new file in the project directory called ".env":    
   cd arcgis_online_email_notifications && touch .env  
 
 3. Copy the below variables to the new .env file and assign values:  
