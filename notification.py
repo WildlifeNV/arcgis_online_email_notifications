@@ -68,7 +68,7 @@ def send_email(path):
 
 # set the new and current data csvs
 current_data = os.path.join(folder_path, "current_data.csv")
-feature = "{}_{}.csv".format(config("FEATURE_NAME"), config("FEATURE_NUMBER")).replace(" ", "_")
+feature = "{}_{}.csv".format(config("LAYER_NAME"), config("LAYER_ID"))
 new_data = os.path.join(folder_path, feature)
 
 # if current data is not avaliable, create current data and remove files 
