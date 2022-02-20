@@ -1,4 +1,4 @@
-# Arcgis Online Email Notifications
+# ArcGIS Online Email Notifications
 This repo holds the script to pull data from an arcgis online account, compare the data with the stored data and email the person of interest if there is a change.
 
 #### Requirements:  
