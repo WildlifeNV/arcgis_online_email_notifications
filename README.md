@@ -16,11 +16,9 @@ This repo holds the script to pull data from an arcgis online account, compare t
 3. Copy the below variables to the new .env file and assign values:  
   ARCGIS_ONLINE_USERNAME =  
   ARCGIS_ONLINE_PASSWORD =  
-  
   FEATURE_ID =  
   LAYER_NAME =  
-  LAYER_ID =
-  
+  LAYER_ID =. 
   HOST =  
   PORT =  
   EMAIL =  
