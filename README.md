@@ -17,14 +17,14 @@ This repo holds the script to pull data from an arcgis online account, compare t
   ARCGIS_ONLINE_USERNAME =  
   ARCGIS_ONLINE_PASSWORD =  
   FEATURE_ID =  
-  FEATURE_NAME =  
-  FEATURE_NUMBER =  
+  LAYER_NAME =  
+  LAYER_ID =  
   HOST =  
   PORT =  
   EMAIL =  
   PASSWORD = 
   
- 4. Use the requirements.txt to create a virtual environment:  
-     conda create --name <env_name> --file requirements.txt  
+ 4. Use the requirements.txt to create a virtual environment and activate it:  
+     conda env create -n notifications_env -f requirements.yml && conda activate notifications_env
    
  5. Run the code with the new evironment 
